@@ -11,10 +11,6 @@ const schema = joi
       .default('development'),
       TOKEN_EXPIRES: joi.number(),
       PORT: joi.number().required(),
-      DB_NAME: joi.string().required(),
-      DB_USER: joi.string().required(),
-      DB_HOST: joi.string().required(),   
-      DB_PASSWORD: joi.string().required(),
   })
   .unknown()
   .required();
@@ -25,12 +21,11 @@ if (error) {
   logger.error(`Config validation error: ${error.message}`);
 }
 
+
 const config = {
   PORT: env.PORT,
   env: env.NODE_ENV,
-  DB_HOST: env.DB_HOST,
-  DB_NAME: env.DB_NAME,
-  DB_USER: env.DB_USER,
+  MONGODB_URL: env.MONGO_URL,
 };
 
 
