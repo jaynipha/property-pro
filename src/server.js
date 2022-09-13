@@ -30,7 +30,7 @@ const { PORT, MONGODB_URL } = require('./config/env');
     this.setupExpress();
     this.setupControllers();
     //must be the last
-
+    this.connectMongodB()
     this.setupErrorHandlers();
   }
 
