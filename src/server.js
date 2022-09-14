@@ -15,7 +15,7 @@ const { PORT, MONGODB_URL } = require('./config/env');
    * same as this.port = port, declaring as private here will
    * add the port variable to the SetupServer instance
    */
-
+ 
   constructor(port = PORT, MONGODB = MONGODB_URL) {
     this.port = port;
     this.mongoDB = MONGODB

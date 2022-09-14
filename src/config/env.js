@@ -28,5 +28,4 @@ const config = {
   MONGODB_URL: env.MONGO_URL,
 };
 
-
 module.exports = config;
