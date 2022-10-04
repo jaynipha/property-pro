@@ -55,7 +55,7 @@ const { PORT, MONGODB_URL } = require('./config/env');
       })
     );
     this.app.use('/v1.0/api', routes);
-    this.app.all('*', (req, res) => res.send({ message: 'route not found' }));
+    //this.app.all('*', (req, res) => res.send({ message: 'route not found' }));
   }
 
   setupErrorHandlers() {
