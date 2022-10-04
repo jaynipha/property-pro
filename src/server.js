@@ -95,7 +95,7 @@ const { PORT, MONGODB_URL } = require('./config/env');
   }
 
   start() {
-    this.server = this.app.listen(this.port || 4001, () => {
+    this.server = this.app.listen(this.port || 3000, () => {
       logger.info('Server listening on port: ' + this.port);
     });
   }
