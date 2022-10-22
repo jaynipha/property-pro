@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "prestart": "yarn migrate",
     "dev": "nodemon src/index.js",
     "build": "babel src -d dist",
     "clean": "yarn -p clean:*",

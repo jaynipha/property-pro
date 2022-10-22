@@ -26,6 +26,7 @@ const config = {
   PORT: env.PORT,
   env: env.NODE_ENV,
   MONGODB_URL: env.MONGO_URL,
+  SESSION_SECRET: env.SESSION_SECRET
 };
 
 module.exports = config;
