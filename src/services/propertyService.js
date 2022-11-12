@@ -8,8 +8,8 @@ const { CLOUD_NAME, API_KEY, API_SECRET } = require('../config/env');
 // const { createToken, hashPassword, comparePassword } = ToolBox;
 
 cloudinary.config({
-        cloud_name: CLOUD_NAME,
         api_key: API_KEY,
+        cloud_name: CLOUD_NAME,
         api_secret: API_SECRET,
 })
 
@@ -26,14 +26,18 @@ async function createPropertyAdvert(data, file) {
         created_on: new Date(),
         status: 'available'
     }
-    
+
     const output = await propertyModel.create(dataObject);
     await output.save();
 
-    return output;
-    
+    return output;   
+}
+
+async function editPropertyData(data, id) {
+    console.log(data, id, '=======');
 }
 
 module.exports = {
-    createPropertyAdvert
+    createPropertyAdvert,
+    editPropertyData
 }
