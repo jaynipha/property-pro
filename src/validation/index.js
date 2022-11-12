@@ -1,1 +1,3 @@
-module.exports = { };
+module.exports = {
+    signupSchema: require('./auth')
+ };

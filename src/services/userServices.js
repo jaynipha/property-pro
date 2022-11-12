@@ -17,18 +17,19 @@ async function signUpServices(data) {
         if(!data){
             return 'ERROR HAS OCCURRED!!'
         }
-        const { password, emailAddress } = data;
+        const { password, email } = data;
 
-        const user = await userModel.findOne({ emailAddress });
- 
+        const user = await userModel.findOne({ email });
+
         //password validation
         const passwordComparsion = comparePassword(password, user.password);
+        
         if(!passwordComparsion) {
             return { status: 401, data: 'User Not Found'}
         }
 
         //CREATE TOKEN
-        const token = createToken({id: user.id, emailAddress })
+        const token = createToken({id: user.id, email })
         return {
             status: 200, 
             data: user,
